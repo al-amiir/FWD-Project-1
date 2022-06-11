@@ -1,0 +1,12 @@
+.scrollToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  transition: 0.4s;
+  background-color: #ffa600;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  clip-path: circle(0% at 50% 50%);
+  z-index: 1000;
+}
