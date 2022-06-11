@@ -10,3 +10,6 @@ a Landing Page That Contains:
 - Hide fixed navigation bar while not scrolling.
 - a scroll to top button on the page that’s only visible when the user scrolls below the fold of the page.
 - Dynamic design and content.
+
+## Live Link
+https://al-amiir.github.io/FWD-Project-1/
