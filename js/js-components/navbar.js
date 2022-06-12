@@ -1,21 +1,14 @@
 /////////////////////////////////////////////////////////////////////////////////
-// Navbar Section's Data
+// Navbar Section's empty fragment
 let navbarItemsFragment = document.createDocumentFragment();
-let navbarItemsArray = [
-  { itemName: "Green" },
-  { itemName: "Red" },
-  { itemName: "Golden" },
-  { itemName: "Pink" },
-];
 /////////////////////////////////////////////////////////////////////////////////
 
 /////////////////////////////////////////////////////////////////////////////////
 /**
  * on click will scroll into view of content items and change style of clicked button
- * @param {item of navbarItemsArray} element
- * @param { index of navbarItemsArray} i
+ * @param {index of content items} i
  */
-function buttonHandlerFunction(element, i) {
+function buttonHandlerFunction(i) {
   // Button Style
   let allButtons = document.querySelectorAll(".navbar_container li");
   allButtons.forEach((button) => (button.style.borderBottom = "none"));
@@ -35,12 +28,11 @@ function buttonHandlerFunction(element, i) {
  */
 function navbarItems() {
   document.querySelectorAll(".content_items").forEach((element, i) => {
-    console.log(element.dataset.nav);
     let dom = document.createElement("li");
     dom.innerText = `${element.dataset.nav}`;
     // Event Listner For Every Button
     dom.addEventListener("click", () => {
-      buttonHandlerFunction(element, i);
+      buttonHandlerFunction(i);
     });
     // Now Append All Buttons to Fragment
     navbarItemsFragment.append(dom);
