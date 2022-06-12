@@ -10,6 +10,7 @@ let ContentArray = [
       soluta id! Incidunt illo iusto a, tempora saepe vero laborum sint labore,
       repellendus sed.`,
     image: "./assets/greenTrees.jpg",
+    nav: "Green",
     color: "#003e00",
   },
   {
@@ -20,6 +21,7 @@ let ContentArray = [
       Excepturi omnis iste ab assumenda labore voluptate libero illum aperiam
       soluta id.`,
     image: "./assets/redTrees.jpg",
+    nav: "Red",
     color: "#6c0000",
   },
   {
@@ -30,6 +32,7 @@ let ContentArray = [
       Excepturi omnis iste ab assumenda labore voluptate libero illum aperiam
       soluta id.`,
     image: "./assets/goldTrees.jpg",
+    nav: "Golden",
     color: "#763c00",
   },
   {
@@ -40,6 +43,7 @@ let ContentArray = [
       Excepturi omnis iste ab assumenda labore voluptate libero illum aperiam
       soluta id.`,
     image: "./assets/pinkTrees.jpg",
+    nav: "Pink",
     color: "#a9364a",
   },
 ];
@@ -52,7 +56,7 @@ let ContentArray = [
 function ContentItems(arr) {
   arr.forEach((element, i) => {
     let dom = `
-              <div id="content_items-${i}" class="content_items active">
+              <div id="content_items-${i}" class="content_items active" data-nav="${element.nav}">
                   <div class="content_items-text">
                       <h3> ${element.header} </h3>
                       <p> ${element.content}</p>

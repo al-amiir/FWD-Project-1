@@ -12,7 +12,7 @@
   justify-content: space-between;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
-  transition: 1s;
+  transition: 0.5s;
 }
 .navbar_logo {
   color: white;
@@ -20,8 +20,10 @@
 }
 .navbar_container {
   height: min-content;
+  display: flex;
+  list-style: none;
 }
-.navbar_container button {
+.navbar_container li {
   background-color: transparent;
   color: white;
   border: none;

@@ -17,7 +17,7 @@ let navbarItemsArray = [
  */
 function buttonHandlerFunction(element, i) {
   // Button Style
-  let allButtons = document.querySelectorAll(".navbar_container button");
+  let allButtons = document.querySelectorAll(".navbar_container li");
   allButtons.forEach((button) => (button.style.borderBottom = "none"));
   allButtons[i].style.borderBottom = "1px solid white";
   // Scroll To Specific Element
@@ -31,13 +31,13 @@ function buttonHandlerFunction(element, i) {
 /////////////////////////////////////////////////////////////////////////////////
 /**
  * This function creates navbar buttons in the dom
- * @param {array of navbar itmes} arr
+ * Buttons are dependent on content items which created in mainContent.js file
  */
-function navbarItems(arr) {
-  // Create Buttons and append it to fragment
-  arr.forEach((element, i) => {
-    let dom = document.createElement("button");
-    dom.innerText = `${element.itemName}`;
+function navbarItems() {
+  document.querySelectorAll(".content_items").forEach((element, i) => {
+    console.log(element.dataset.nav);
+    let dom = document.createElement("li");
+    dom.innerText = `${element.dataset.nav}`;
     // Event Listner For Every Button
     dom.addEventListener("click", () => {
       buttonHandlerFunction(element, i);
@@ -105,6 +105,6 @@ setInterval(() => {
     navbar.style.cssText = "visibility:hidden;opacity:0";
     scrolling = false;
   }
-}, 2000);
+}, 5000);
 
-navbarItems(navbarItemsArray);
+navbarItems();
